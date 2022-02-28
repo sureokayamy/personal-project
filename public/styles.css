@@ -28,7 +28,7 @@ body {
     width: 100vw;
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
+    /* flex-wrap: nowrap; */
     position: sticky;
     top: 0px;
     background-color: var(--palegreen);
@@ -77,8 +77,9 @@ body {
     width: 75vw;
     border-radius: 10px;
     padding: 15px;
-    /* margin-top: 10vh;
-    margin-bottom: 10vh; */
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
     /* box-shadow: 5px 5px var(--yellow1), 10px 10px var(--pink2), 15px 15px var(--purple); */
     box-shadow: 3px 3px var(--yellow1), 6px 6px var(--pink2), 9px 9px var(--teal), 12px 12px var(--purple);
     
@@ -215,12 +216,19 @@ color: var(--teal);
 color: var(--teal);
 }
 
+.dietary {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+}
 .dietary-needs {
     font-family: 'VT323', monospace;
     font-size: 1.6rem;
     color: var(--teal);
     background-color: #FFFFFF;
     padding: 3px 2px;
+    margin-right: 5px;
     border: 2px solid var(--purple);
 }
 
@@ -231,8 +239,7 @@ button {
     border-radius: 10px;
     border: none;
     height: 2rem;
-    width: 4rem;
-    margin: 5px 0;
+    margin: 5px 5px;
     font-family: 'Bitter', serif;
     align-self: center;
 }
