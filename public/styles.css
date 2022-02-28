@@ -57,13 +57,12 @@ body {
 }
 
 .nav-menu a, .nav-menu a:visited {
-    color: var(--pink2);
+    /* color: var(--pink2); */
     text-decoration: none;
 }
 
 .nav-menu a:hover, .nav-menu a:active {
-    text-decoration: 3px dashed overline;
-    text-decoration-color: var(--lightblue);
+    text-decoration: none;
 }
 
 /* Content Styling */
@@ -77,10 +76,11 @@ body {
     border: 3px solid var(--purple);
     width: 75vw;
     border-radius: 10px;
+    padding: 15px;
     /* margin-top: 10vh;
     margin-bottom: 10vh; */
     /* box-shadow: 5px 5px var(--yellow1), 10px 10px var(--pink2), 15px 15px var(--purple); */
-    box-shadow: 3px 3px var(--yellow1), 6px 6px var(--pink2), 9px 9px var(--lightblue), 12px 12px var(--purple);
+    box-shadow: 3px 3px var(--yellow1), 6px 6px var(--pink2), 9px 9px var(--teal), 12px 12px var(--purple);
     
 }
 
@@ -118,7 +118,6 @@ body {
     z-index: 1;
     top: -25px;
     right: 120%;
-    box-shadow: var(--purple);
     
 }
 
@@ -126,43 +125,55 @@ body {
     visibility: visible;
 }
 
-fieldset {
-    border: none;
-}
+/* Ranked Results Styling */
 
-/* Footer styling */
-.footer-content {
-    width: 100vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    font-size: 1.5rem;
-    font-weight: bold;
-    background-color: var(--purple);
+.results-ranking {
+ display: flex;
+ flex-direction: column;
+ justify-content: space-around;
+ color: var(--purple);
 }
-
-.footer-content a, .footer-content a:visited {
-    color: var(--palegreen);
-    text-decoration: none;
+.first {
+    font-size: 3rem;
     border-radius: 10px;
-    padding: 8px;
+    /* box-shadow: 0px 0px 0px 3px var(--yellow1), 0px 0px 0px 6px var(--pink2), 0px 0px 0px 9px var(--teal), 0px 0px 0px 12px var(--purple); */
+    padding: 5px;
 }
 
-.footer-content a:hover, .footer-content a:active {
-    box-shadow: 3px 3px var(--yellow1), 6px 6px var(--pink2), 9px 9px var(--lightblue);
+.second {
+    font-size: 2.5rem;
 }
 
-.footer-content ul {
-    list-style: none;
+.third {
+    font-size: 2rem;
 }
 
-.footer-content li {
-    display: inline-block;
-    padding: 3vh 10vw;
+.fourth {
+    font-size: 1.5rem;
+}
+
+.fifth {
+    font-size: 1rem;
+}
+
+.sixth {
+    font-size: .75rem;
+}
+
+/* Challenge Styling */
+
+.challenge {
+    font-size: 6rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* Form Styling */
+
+fieldset {
+    border: none;
+}
 
 form {
     display: flex;
@@ -186,28 +197,28 @@ label {
 input, select {
     font-family: 'VT323', monospace;
     font-size: 1.6rem;
-    color: var(--lightblue);
+    color: var(--teal);
     padding: 3px 2px;
     border: 2px solid var(--purple);
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-color: var(--lightblue);
+color: var(--teal);
 opacity: 1; /* Firefox */
 }
 
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-color: var(--lightblue);
+color: var(--teal);
 }
 
 ::-ms-input-placeholder { /* Microsoft Edge */
-color: var(--lightblue);
+color: var(--teal);
 }
 
 .dietary-needs {
     font-family: 'VT323', monospace;
     font-size: 1.6rem;
-    color: var(--lightblue);
+    color: var(--teal);
     background-color: #FFFFFF;
     padding: 3px 2px;
     border: 2px solid var(--purple);
@@ -223,7 +234,7 @@ button {
     width: 4rem;
     margin: 5px 0;
     font-family: 'Bitter', serif;
-    margin-left: 50%;
+    align-self: center;
 }
 
 button > span {
@@ -237,13 +248,45 @@ button:hover  {
 
 button:active {
     box-shadow: 10px 5px var(--pink2);
-    color: var(--lightblue);
+    color: var(--teal);
     text-transform: uppercase;
     font-weight: bold;
 }
 
 button:active > span {
     visibility: visible;
+}
+
+/* Footer styling */
+.footer-content {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: var(--purple);
+}
+
+.footer-content a, .footer-content a:visited {
+    color: var(--palegreen);
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 8px;
+}
+
+.footer-content a:hover, .footer-content a:active {
+    box-shadow: 3px 3px var(--yellow1), 6px 6px var(--pink2), 9px 9px var(--teal);
+}
+
+.footer-content ul {
+    list-style: none;
+}
+
+.footer-content li {
+    display: inline-block;
+    padding: 3vh 10vw;
 }
 
 
@@ -272,17 +315,10 @@ body, .nav-menu, .main-outer-container, .footer-content {
 }
 
 .logo {
-    font-family: 'Modak';
     font-size: 6rem;
-    color: var(--pink2);
-    background-color: transparent;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
 }
 
 .sub-logo {
-    color: var(--pink2);
-    font-weight: bold;
     font-size: 2rem;
 }
 

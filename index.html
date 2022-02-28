@@ -34,16 +34,27 @@
                         <input type="zipcode" name="zipcode" id="zipcode" placeholder="zipcode">
                     </div> -->
                     <div class="form-input">
-                        <label for="distance">How far away should restaurant be from <label for="zipcode"></label>
-                        <input type="zipcode" name="zipcode" id="zipcode" placeholder="enter zipcode">?</label>
-                        <select id="distance" name="distance">
+                        <label for="distance">The restaurant should be <select id="distance" name="distance">
                             <option value="1">≤1 mile</option>
                             <option value="2">≤ 2 miles</option>
                             <option value="3">≤ 5 miles</option>
-                            <option value="4">> 5 miles</option>
+                            <option value="4">≥ 5 miles</option>
+                        </select> away from <label for="zipcode"></label>
+                        <input type="zipcode" name="zipcode" id="zipcode" placeholder="enter zipcode">.</label>
+                        
+                    </div>
+
+                    <div class="form-input">
+                        <label for="priceRange">What should the price range of the restaurant be?</label>
+                        <select id="priceRange" name="priceRange">
+                            <option value="1">$</option>
+                            <option value="2">$$</option>
+                            <option value="3">$$$</option>
+                            <option value="4">$$$$</option>
+                            <option value="5">anything!</option>
                         </select>
                     </div>
-                    <div class="form-input">
+                    <!-- <div class="form-input">
                         <label for="dietary">Any dietary needs?</label>
 
                         <div class="dietary-needs"><input type="checkbox" id="allergy" value="allergy"><label for="allergy" class="dietary-needs">Allergy</label></div>
@@ -58,12 +69,12 @@
 
                         <div><input type="checkbox" id="vegetarian" value="vegetarian"><label for="vegetarian" class="dietary-needs">Vegetarian</label></div>
 
-                    </div>
-                    <div>
-                        <button type="submit">start<span >!</span></button>
-                    </div>
+                    </div> -->
                 </fieldset>
             </form>
+            <div>
+                <a href="./choice.html"><button type="submit">start<span >!</span></button></a>
+            </div>
         </main>
     </div>
 
