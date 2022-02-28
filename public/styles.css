@@ -1,0 +1,309 @@
+:root {
+    --purple: #2B2D42;
+    --pink1: #E86A92;
+    --pink2: #FF6392;
+    --yellow1: #FFE45E;
+    --yellow2: #EBD80A;
+    --palegreen: #EFFBEF;
+    --lightblue: #7FC8F8;
+    --teal: #1FC199;
+    --brown: #564138;
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+body {
+    background-color: var(--purple);
+    width: 100vw;
+    max-height: 100vh;
+    font-family: 'Bitter', serif;
+}
+
+/* Nav styling */
+.nav-menu {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    position: sticky;
+    top: 0px;
+    background-color: var(--palegreen);
+    padding-top: 1rem;
+    padding-bottom: .5rem;
+    /* box-shadow: 0px 3px var(--yellow1), 0px 6px var(--pink2), 0px 9px var(--lightblue), 0px 12px var(--purple); */
+}
+
+.nav-menu img {
+    width: 75vw;
+}
+
+.logo {
+    font-family: 'Modak';
+    font-size: 5rem;
+    color: var(--pink2);
+    background-color: transparent;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.sub-logo {
+    color: var(--pink2);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.nav-menu a, .nav-menu a:visited {
+    color: var(--pink2);
+    text-decoration: none;
+}
+
+.nav-menu a:hover, .nav-menu a:active {
+    text-decoration: 3px dashed overline;
+    text-decoration-color: var(--lightblue);
+}
+
+/* Content Styling */
+.main-outer-container {
+    background-color: var(--palegreen);
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+.main-content {
+    border: 3px solid var(--purple);
+    width: 75vw;
+    border-radius: 10px;
+    /* margin-top: 10vh;
+    margin-bottom: 10vh; */
+    /* box-shadow: 5px 5px var(--yellow1), 10px 10px var(--pink2), 15px 15px var(--purple); */
+    box-shadow: 3px 3px var(--yellow1), 6px 6px var(--pink2), 9px 9px var(--lightblue), 12px 12px var(--purple);
+    
+}
+
+.help {
+    border-radius: 50px;
+    border: 3px solid var(--purple);
+    background-color: var(--purple);
+   width: 40px;
+   position: relative;
+   right: 0px;
+   margin-top: 5px;
+   margin-right: 5px;
+   text-align: center;
+}
+
+/* .help:hover {
+    box-shadow: 0px 0px 0px 20px var(--yellow1);
+} */
+
+.help p {
+    font-size: 1.5rem;
+    font-family: 'Modak';
+    color: var(--pink2)
+}
+
+.help-tooltip {
+    visibility: hidden;
+    width: 200px;
+    background-color: var(--purple);
+    color: var(--palegreen);
+    border: 2px solid var(--pink2);
+    border-radius: 10px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: -25px;
+    right: 120%;
+    box-shadow: var(--purple);
+    
+}
+
+.help:hover .help-tooltip {
+    visibility: visible;
+}
+
+fieldset {
+    border: none;
+}
+
+/* Footer styling */
+.footer-content {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: var(--purple);
+}
+
+.footer-content a, .footer-content a:visited {
+    color: var(--palegreen);
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 8px;
+}
+
+.footer-content a:hover, .footer-content a:active {
+    box-shadow: 3px 3px var(--yellow1), 6px 6px var(--pink2), 9px 9px var(--lightblue);
+}
+
+.footer-content ul {
+    list-style: none;
+}
+
+.footer-content li {
+    display: inline-block;
+    padding: 3vh 10vw;
+}
+
+/* Form Styling */
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    padding: 5px;
+}
+
+.form-input {
+    margin: 10px 10px;
+    padding: 5px;
+}
+
+label {
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--purple);
+}
+
+input, select {
+    font-family: 'VT323', monospace;
+    font-size: 1.6rem;
+    color: var(--lightblue);
+    padding: 3px 2px;
+    border: 2px solid var(--purple);
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+color: var(--lightblue);
+opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+color: var(--lightblue);
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+color: var(--lightblue);
+}
+
+.dietary-needs {
+    font-family: 'VT323', monospace;
+    font-size: 1.6rem;
+    color: var(--lightblue);
+    background-color: #FFFFFF;
+    padding: 3px 2px;
+    border: 2px solid var(--purple);
+}
+
+  
+button {
+    color: var(--pink2);
+    background-color: var(--purple);
+    border-radius: 10px;
+    border: none;
+    height: 2rem;
+    width: 4rem;
+    margin: 5px 0;
+    font-family: 'Bitter', serif;
+    margin-left: 50%;
+}
+
+button > span {
+    visibility: hidden;
+}
+
+button:hover  {
+    
+    box-shadow: 10px 5px var(--yellow1);
+}
+
+button:active {
+    box-shadow: 10px 5px var(--pink2);
+    color: var(--lightblue);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+button:active > span {
+    visibility: visible;
+}
+
+
+/* Media Queries */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+body, .nav-menu, .main-outer-container, .footer-content {
+    min-width: 250px;
+}
+
+    .nav-menu img {
+        min-width: 200px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+.nav-menu img {
+    width: 65vw;
+}
+
+.logo {
+    font-family: 'Modak';
+    font-size: 6rem;
+    color: var(--pink2);
+    background-color: transparent;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.sub-logo {
+    color: var(--pink2);
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.main-content {
+    width: 45vw;
+}
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+    .nav-menu img {
+        width: 60vw;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .nav-menu img {
+        width: 35vw;
+    }
+
+}
