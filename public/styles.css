@@ -1,13 +1,9 @@
 :root {
     --purple: #2B2D42;
-    --pink1: #E86A92;
-    --pink2: #FF6392;
-    --yellow1: #FFE45E;
-    --yellow2: #EBD80A;
+    --pink: #FF6392;
+    --yellow: #FFE45E;
     --palegreen: #EFFBEF;
-    --lightblue: #7FC8F8;
     --teal: #1FC199;
-    --brown: #564138;
     font-size: 16px;
 }
 
@@ -19,6 +15,7 @@
 body {
     background-color: var(--purple);
     width: 100vw;
+    max-width: 100vw;
     max-height: 100vh;
     font-family: 'Bitter', serif;
 }
@@ -34,9 +31,10 @@ body {
     background-color: var(--palegreen);
     padding-top: 1rem;
     padding-bottom: .5rem;
-    /* box-shadow: 0px 3px var(--yellow1), 0px 6px var(--pink2), 0px 9px var(--lightblue), 0px 12px var(--purple); */
 }
 
+
+/* For logo; should be an absolute number that changes in @media queries */
 .nav-menu img {
     width: 75vw;
 }
@@ -44,20 +42,20 @@ body {
 .logo {
     font-family: 'Modak';
     font-size: 5rem;
-    color: var(--pink2);
+    color: var(--pink);
     background-color: transparent;
     padding-bottom: 0px;
     margin-bottom: 0px;
 }
 
 .sub-logo {
-    color: var(--pink2);
+    color: var(--pink);
     font-weight: bold;
     font-size: 1.3rem;
 }
 
 .nav-menu a, .nav-menu a:visited {
-    /* color: var(--pink2); */
+    /* color: var(--pink); */
     text-decoration: none;
 }
 
@@ -80,8 +78,8 @@ body {
     display:flex;
     flex-direction: column;
     justify-content: center;
-    /* box-shadow: 5px 5px var(--yellow1), 10px 10px var(--pink2), 15px 15px var(--purple); */
-    box-shadow: 3px 3px var(--yellow1), 6px 6px var(--pink2), 9px 9px var(--teal), 12px 12px var(--purple);
+    /* box-shadow: 5px 5px var(--yellow), 10px 10px var(--pink), 15px 15px var(--purple); */
+    box-shadow: 3px 3px var(--yellow), 6px 6px var(--pink), 9px 9px var(--teal), 12px 12px var(--purple);
     
 }
 
@@ -98,13 +96,13 @@ body {
 }
 
 /* .help:hover {
-    box-shadow: 0px 0px 0px 20px var(--yellow1);
+    box-shadow: 0px 0px 0px 20px var(--yellow);
 } */
 
 .help p {
     font-size: 1.5rem;
     font-family: 'Modak', cursive;
-    color: var(--pink2)
+    color: var(--pink)
 }
 
 .help-tooltip {
@@ -112,7 +110,7 @@ body {
     width: 200px;
     background-color: var(--purple);
     color: var(--palegreen);
-    border: 2px solid var(--pink2);
+    border: 2px solid var(--pink);
     border-radius: 10px;
     padding: 5px 0;
     position: absolute;
@@ -137,7 +135,7 @@ body {
 .first {
     font-size: 3rem;
     border-radius: 10px;
-    /* box-shadow: 0px 0px 0px 3px var(--yellow1), 0px 0px 0px 6px var(--pink2), 0px 0px 0px 9px var(--teal), 0px 0px 0px 12px var(--purple); */
+    /* box-shadow: 0px 0px 0px 3px var(--yellow), 0px 0px 0px 6px var(--pink), 0px 0px 0px 9px var(--teal), 0px 0px 0px 12px var(--purple); */
     padding: 5px;
 }
 
@@ -173,7 +171,18 @@ body {
 /* Form Styling */
 
 fieldset {
-    border: none;
+    border: 1px solid var(--purple);
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+fieldset legend {
+    font-family: 'Bitter';
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--pink);
+    /* Would like to change position of the legend */
+    /* float: left; */
 }
 
 form {
@@ -201,6 +210,7 @@ input, select {
     color: var(--teal);
     padding: 3px 2px;
     border: 2px solid var(--purple);
+    border-radius: 10px;
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -222,19 +232,27 @@ color: var(--teal);
     align-items: flex-start;
 
 }
-.dietary-needs {
-    font-family: 'VT323', monospace;
-    font-size: 1.6rem;
-    color: var(--teal);
+
+.dietary-needs-outer {
+    border: 2px solid var(--purple);
     background-color: #FFFFFF;
     padding: 3px 2px;
     margin-right: 5px;
-    border: 2px solid var(--purple);
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
+
+.dietary-needs {
+    font-family: 'VT323', monospace;
+    font-size: 1.3rem;
+    color: var(--teal);
+    padding: 3px 2px;
+    margin-right: 5px;
 }
 
   
 button {
-    color: var(--pink2);
+    color: var(--pink);
     background-color: var(--purple);
     border-radius: 10px;
     border: none;
@@ -250,11 +268,11 @@ button > span {
 
 button:hover  {
     
-    box-shadow: 10px 5px var(--yellow1);
+    box-shadow: 10px 5px var(--yellow);
 }
 
 button:active {
-    box-shadow: 10px 5px var(--pink2);
+    box-shadow: 10px 5px var(--pink);
     color: var(--teal);
     text-transform: uppercase;
     font-weight: bold;
@@ -284,7 +302,7 @@ button:active > span {
 }
 
 .footer-content a:hover, .footer-content a:active {
-    box-shadow: 3px 3px var(--yellow1), 6px 6px var(--pink2), 9px 9px var(--teal);
+    box-shadow: 3px 3px var(--yellow), 6px 6px var(--pink), 9px 9px var(--teal);
 }
 
 .footer-content ul {

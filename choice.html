@@ -18,14 +18,17 @@
 
     </header>
 
+    //Add a minimum viable option: just choose type of cuisine, results will link to a google or yelp search for that cuisine with the other parameters included in the search (i.e., zipcode, price, etc.)
+
     <div class="main-outer-container">
         <main class="main-content">
             <div class="help"><p>?</p>
                 <div class="help-tooltip">You must select a different option for each choice, no brute-forcing your way to pizza.</div>
             </div>
             <form>
+                <!-- Diner #1 enters their criteia -->
                 <fieldset>
-
+                    <legend>diner #1</legend>
                     <div class="form-input">
                         <label for="choice1">Enter your first choice:</label>
                         <select name="choice1" id="choice1">
@@ -78,17 +81,179 @@
                         <label for="dietary">Any dietary needs?</label>
 
                         <div class="dietary">
-                            <div class="dietary-needs"><input type="checkbox" id="allergy" value="allergy"><label for="allergy" >Allergy</label></div>
 
-                            <div class="dietary-needs"><input type="checkbox" id="gluten-free" value="gluten-free"><label for="gluten-free">Gluten-free</label></div>
+                            <!-- Allergy Checkbox -->
+                            <div class="dietary-needs-outer"><input type="checkbox" id="allergy" value="allergy"><label for="allergy" class="dietary-needs">Allergy</label></div>
 
-                            <div class="dietary-needs"><input type="checkbox" id="halal" value="halal"><label for="halal" class="dietary-needs">Halal</label></div>
+                            <!-- Gluten Free Checkbox -->
+                            <div class="dietary-needs-outer"><input type="checkbox" id="gluten-free" value="gluten-free"><label for="gluten-free" class="dietary-needs">Gluten-free</label></div>
 
-                            <div class="dietary-needs"><input type="checkbox" id="kosher" value="kosher"><label for="kosher" class="dietary-needs">Kosher</label></div>
+                            <!-- Halal Checkbox -->
+                            <div class="dietary-needs-outer"><input type="checkbox" id="halal" value="halal"><label for="halal" class="dietary-needs">Halal</label></div>
 
-                            <div class="dietary-needs"><input type="checkbox" id="vegan" value="vegan"><label for="vegan" class="dietary-needs">Vegan</label></div>
+                            <!-- Kosher Checkbox -->
+                            <div class="dietary-needs-outer"><input type="checkbox" id="kosher" value="kosher"><label for="kosher" class="dietary-needs">Kosher</label></div>
 
-                            <div class="dietary-needs"><input type="checkbox" id="vegetarian" value="vegetarian"><label for="vegetarian" class="dietary-needs">Vegetarian</label></div>
+                            <!-- Vegan Checkbox -->
+                            <div class="dietary-needs-outer"><input type="checkbox" id="vegan" value="vegan"><label for="vegan" class="dietary-needs">Vegan</label></div>
+
+                            <!-- Vegetarian Checkbox -->
+                            <div class="dietary-needs-outer"><input type="checkbox" id="vegetarian" value="vegetarian"><label for="vegetarian" class="dietary-needs">Vegetarian</label></div>
+                        </div>
+
+                    </div>
+                </fieldset>
+
+                <!-- Diner #2 enters their criteria -->
+                <fieldset>
+                    <legend>diiner #2</legend>
+                    <div class="form-input">
+                        <label for="choice1">Enter your first choice:</label>
+                        <select name="choice1" id="choice1">
+                            <option value="sushi">sushi</option>
+                            <option value="pizza">pizza</option>
+                            <option value="salad">salad</option>
+                            <option value="diner">diner</option>
+                            <option value="burrito">burrito</option>
+                            <option value="thai">Thai food</option>
+                            <option value="french">French food</option>
+                            <option value="hot-pot">hot pot</option>
+                            <option value="burger">burger</option>
+                            <option value="dessert">dessert</option>
+                        </select>
+                    </div>
+
+                    <div class="form-input">
+                        <label for="choice2">Enter your second choice:</label>
+                        <select name="choice2" id="choice2">
+                            <option value="sushi">sushi</option>
+                            <option value="pizza">pizza</option>
+                            <option value="salad">salad</option>
+                            <option value="diner">diner</option>
+                            <option value="burrito">burrito</option>
+                            <option value="thai">Thai food</option>
+                            <option value="french">French food</option>
+                            <option value="hot-pot">hot pot</option>
+                            <option value="burger">burger</option>
+                            <option value="dessert">dessert</option>
+                        </select>
+                    </div>
+
+                    <div class="form-input">
+                        <label for="choice2">Enter your third choice:</label>
+                        <select name="choice3" id="choice3">
+                            <option value="sushi">sushi</option>
+                            <option value="pizza">pizza</option>
+                            <option value="salad">salad</option>
+                            <option value="diner">diner</option>
+                            <option value="burrito">burrito</option>
+                            <option value="thai">Thai food</option>
+                            <option value="french">French food</option>
+                            <option value="hot-pot">hot pot</option>
+                            <option value="burger">burger</option>
+                            <option value="dessert">dessert</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-input">
+                        <label for="dietary">Any dietary needs?</label>
+
+                        <div class="dietary">
+
+                            <!-- Allergy Checkbox -->
+                            <div class="dietary-needs-outer"><input type="checkbox" id="allergy" value="allergy"><label for="allergy" class="dietary-needs">Allergy</label></div>
+
+                            <!-- Gluten Free Checkbox -->
+                            <div class="dietary-needs-outer"><input type="checkbox" id="gluten-free" value="gluten-free"><label for="gluten-free" class="dietary-needs">Gluten-free</label></div>
+
+                            <!-- Halal Checkbox -->
+                            <div class="dietary-needs-outer"><input type="checkbox" id="halal" value="halal"><label for="halal" class="dietary-needs">Halal</label></div>
+
+                            <!-- Kosher Checkbox -->
+                            <div class="dietary-needs-outer"><input type="checkbox" id="kosher" value="kosher"><label for="kosher" class="dietary-needs">Kosher</label></div>
+
+                            <!-- Vegan Checkbox -->
+                            <div class="dietary-needs-outer"><input type="checkbox" id="vegan" value="vegan"><label for="vegan" class="dietary-needs">Vegan</label></div>
+
+                            <!-- Vegetarian Checkbox -->
+                            <div class="dietary-needs-outer"><input type="checkbox" id="vegetarian" value="vegetarian"><label for="vegetarian" class="dietary-needs">Vegetarian</label></div>
+                        </div>
+
+                    </div>
+                </fieldset>
+                <!-- Diner #3 enters their criteria -->
+                <fieldset>
+                    <legend>diiiner #3</legend>
+                    <div class="form-input">
+                        <label for="choice1">Enter your first choice:</label>
+                        <select name="choice1" id="choice1">
+                            <option value="sushi">sushi</option>
+                            <option value="pizza">pizza</option>
+                            <option value="salad">salad</option>
+                            <option value="diner">diner</option>
+                            <option value="burrito">burrito</option>
+                            <option value="thai">Thai food</option>
+                            <option value="french">French food</option>
+                            <option value="hot-pot">hot pot</option>
+                            <option value="burger">burger</option>
+                            <option value="dessert">dessert</option>
+                        </select>
+                    </div>
+
+                    <div class="form-input">
+                        <label for="choice2">Enter your second choice:</label>
+                        <select name="choice2" id="choice2">
+                            <option value="sushi">sushi</option>
+                            <option value="pizza">pizza</option>
+                            <option value="salad">salad</option>
+                            <option value="diner">diner</option>
+                            <option value="burrito">burrito</option>
+                            <option value="thai">Thai food</option>
+                            <option value="french">French food</option>
+                            <option value="hot-pot">hot pot</option>
+                            <option value="burger">burger</option>
+                            <option value="dessert">dessert</option>
+                        </select>
+                    </div>
+
+                    <div class="form-input">
+                        <label for="choice2">Enter your third choice:</label>
+                        <select name="choice3" id="choice3">
+                            <option value="sushi">sushi</option>
+                            <option value="pizza">pizza</option>
+                            <option value="salad">salad</option>
+                            <option value="diner">diner</option>
+                            <option value="burrito">burrito</option>
+                            <option value="thai">Thai food</option>
+                            <option value="french">French food</option>
+                            <option value="hot-pot">hot pot</option>
+                            <option value="burger">burger</option>
+                            <option value="dessert">dessert</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-input">
+                        <label for="dietary">Any dietary needs?</label>
+
+                        <div class="dietary">
+
+                            <!-- Allergy Checkbox -->
+                            <div class="dietary-needs-outer"><input type="checkbox" id="allergy" value="allergy"><label for="allergy" class="dietary-needs">Allergy</label></div>
+
+                            <!-- Gluten Free Checkbox -->
+                            <div class="dietary-needs-outer"><input type="checkbox" id="gluten-free" value="gluten-free"><label for="gluten-free" class="dietary-needs">Gluten-free</label></div>
+
+                            <!-- Halal Checkbox -->
+                            <div class="dietary-needs-outer"><input type="checkbox" id="halal" value="halal"><label for="halal" class="dietary-needs">Halal</label></div>
+
+                            <!-- Kosher Checkbox -->
+                            <div class="dietary-needs-outer"><input type="checkbox" id="kosher" value="kosher"><label for="kosher" class="dietary-needs">Kosher</label></div>
+
+                            <!-- Vegan Checkbox -->
+                            <div class="dietary-needs-outer"><input type="checkbox" id="vegan" value="vegan"><label for="vegan" class="dietary-needs">Vegan</label></div>
+
+                            <!-- Vegetarian Checkbox -->
+                            <div class="dietary-needs-outer"><input type="checkbox" id="vegetarian" value="vegetarian"><label for="vegetarian" class="dietary-needs">Vegetarian</label></div>
                         </div>
 
                     </div>
