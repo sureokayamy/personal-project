@@ -52,6 +52,8 @@ body {
     color: var(--pink);
     font-weight: bold;
     font-size: 1.3rem;
+    position: relative;
+    top: -35px;
 }
 
 .nav-menu a, .nav-menu a:visited {
@@ -66,7 +68,7 @@ body {
 /* Content Styling */
 .main-outer-container {
     background-color: var(--palegreen);
-    padding-top: 5vh;
+    padding-top: 1.5vh;
     padding-bottom: 5vh;
 }
 
@@ -74,11 +76,10 @@ body {
     border: 3px solid var(--purple);
     width: 75vw;
     border-radius: 10px;
-    padding: 15px;
+    padding: 10px;
     display:flex;
     flex-direction: column;
     justify-content: center;
-    /* box-shadow: 5px 5px var(--yellow), 10px 10px var(--pink), 15px 15px var(--purple); */
     box-shadow: 3px 3px var(--yellow), 6px 6px var(--pink), 9px 9px var(--teal), 12px 12px var(--purple);
     
 }
@@ -105,10 +106,6 @@ body {
 .main-content a:hover, .main-content a:active {
     text-decoration: underline;
 }
-
-/* .help:hover {
-    box-shadow: 0px 0px 0px 20px var(--yellow);
-} */
 
 .help p {
     font-size: 1.5rem;
@@ -338,13 +335,36 @@ body, .nav-menu, .main-outer-container, .footer-content {
     min-width: 250px;
 }
 
-    .nav-menu img {
-        min-width: 200px;
-    }
+.nav-menu img {
+    min-width: 200px;
+}
+
+.first {
+    font-size: 2rem;
+}
+
+.second {
+    font-size: 1.75rem;
+}
+
+.third {
+    font-size: 1.5rem;
+}
+
+.fourth {
+    font-size: 1.25rem;
+}
+
+.fifth {
+    font-size: 1rem;
+}
+
+.sixth {
+    font-size: .75rem;
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 601px) {
 
 
 }
@@ -364,7 +384,16 @@ body, .nav-menu, .main-outer-container, .footer-content {
 }
 
 .main-content {
-    width: 45vw;
+    min-width: 60vw;
+}
+
+form {
+    flex-direction: row;
+}
+
+fieldset {
+    margin: 5px;
+    padding: 5px;
 }
 
 }
@@ -375,12 +404,23 @@ body, .nav-menu, .main-outer-container, .footer-content {
     .nav-menu img {
         width: 60vw;
     }
+
+    .main-content {
+        min-width: 50vw;
+        max-width: 55vw;
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
     .nav-menu img {
-        width: 35vw;
+        min-width: 40vw;
+        max-width: 45vw;
+    }
+
+    .main-content {
+        min-width: 40vw;
+        max-width: 55vw;
     }
 
 }
