@@ -1,22 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,300;0,600;1,300;1,600&family=Modak&family=VT323&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./public/styles.css">
-    <title>Diinder | Let's choose!</title>
-</head>
-<body>
-    <header class="nav-menu">
-        <!-- <a href="./index.html"><img src="./public/images/logo_temp.png" alt="dinder: dinner, decided."></a> -->
-        <a href="./index.html"><span class="logo">diinder</a>
-        <span class="sub-logo">dinner, decided.</span>
+<%- include('../partials/head') -%> 
 
-    </header>
+<%- include('../partials/nav') -%> 
 
     <!-- Add a minimum viable option: just choose type of cuisine, results will link to a google or yelp search for that cuisine with the other parameters included in the search (i.e., zipcode, price, etc.) -->
 
@@ -32,6 +16,7 @@
                     <div class="form-input">
                         <label for="choice1">Enter your first choice:</label>
                         <select name="choice1" id="choice1">
+                            <option name="default" selected>?</option>
                             <option value="sushi">sushi</option>
                             <option value="pizza">pizza</option>
                             <option value="salad">salad</option>
@@ -48,6 +33,7 @@
                     <div class="form-input">
                         <label for="choice2">Enter your second choice:</label>
                         <select name="choice2" id="choice2">
+                            <option name="default" selected>?</option>
                             <option value="sushi">sushi</option>
                             <option value="pizza">pizza</option>
                             <option value="salad">salad</option>
@@ -64,6 +50,7 @@
                     <div class="form-input">
                         <label for="choice2">Enter your third choice:</label>
                         <select name="choice3" id="choice3">
+                            <option name="default" selected>?</option>
                             <option value="sushi">sushi</option>
                             <option value="pizza">pizza</option>
                             <option value="salad">salad</option>
@@ -110,6 +97,7 @@
                     <div class="form-input">
                         <label for="choice1">Enter your first choice:</label>
                         <select name="choice1" id="choice1">
+                            <option name="default" selected>?</option>
                             <option value="sushi">sushi</option>
                             <option value="pizza">pizza</option>
                             <option value="salad">salad</option>
@@ -126,6 +114,7 @@
                     <div class="form-input">
                         <label for="choice2">Enter your second choice:</label>
                         <select name="choice2" id="choice2">
+                            <option name="default" selected>?</option>
                             <option value="sushi">sushi</option>
                             <option value="pizza">pizza</option>
                             <option value="salad">salad</option>
@@ -142,6 +131,7 @@
                     <div class="form-input">
                         <label for="choice2">Enter your third choice:</label>
                         <select name="choice3" id="choice3">
+                            <option name="default" selected>?</option>
                             <option value="sushi">sushi</option>
                             <option value="pizza">pizza</option>
                             <option value="salad">salad</option>
@@ -187,6 +177,7 @@
                     <div class="form-input">
                         <label for="choice1">Enter your first choice:</label>
                         <select name="choice1" id="choice1">
+                            <option name="default" selected>?</option>
                             <option value="sushi">sushi</option>
                             <option value="pizza">pizza</option>
                             <option value="salad">salad</option>
@@ -203,6 +194,7 @@
                     <div class="form-input">
                         <label for="choice2">Enter your second choice:</label>
                         <select name="choice2" id="choice2">
+                            <option name="default" selected>?</option>
                             <option value="sushi">sushi</option>
                             <option value="pizza">pizza</option>
                             <option value="salad">salad</option>
@@ -219,6 +211,7 @@
                     <div class="form-input">
                         <label for="choice2">Enter your third choice:</label>
                         <select name="choice3" id="choice3">
+                            <option name="default" selected>?</option>
                             <option value="sushi">sushi</option>
                             <option value="pizza">pizza</option>
                             <option value="salad">salad</option>
@@ -261,17 +254,9 @@
             </form>
 
             <div>
-                <a href="./result.html"><button type="submit">yum<span >!</span></button></a>
+                <a href="/result"><button type="submit">yum<span >!</span></button></a>
             </div>
         </main>
     </div>
 
-    <footer class="footer-content">
-        <ul>
-            <li><a href="./about.html">about</a></li>
-            <li><a href="./contact.html">contact</a></li>
-        </ul>
-    </footer>
-    
-</body>
-</html>
+    <%- include('../partials/footer') -%> 
