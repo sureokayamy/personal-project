@@ -274,6 +274,16 @@ button {
     font-family: 'Bitter', serif;
     align-self: center;
 }
+input[type=submit] {
+        color: var(--pink);
+        background-color: var(--purple);
+        border-radius: 10px;
+        border: none;
+        height: 2rem;
+        margin: 5px 5px;
+        font-family: 'Bitter', serif;
+        align-self: center;
+}
 
 button > span {
     visibility: hidden;
@@ -325,6 +335,11 @@ button:active > span {
 .footer-content li {
     display: inline-block;
     padding: 3vh 10vw;
+}
+
+.copyright {
+    text-align: center;
+    color: var(--palegreen);
 }
 
 

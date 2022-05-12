@@ -1,2 +1,4 @@
 #Ignore the Yelp API
 /node_modules
+.restaurants.json
+/public/yelp-api-dataset
