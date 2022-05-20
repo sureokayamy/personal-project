@@ -1,0 +1,34 @@
+<%- include('../partials/head') -%> 
+
+<%- include('../partials/nav') -%> 
+
+    <div class="main-outer-container">
+        <main class="main-content">
+            <div>
+                Don't have an account? <a href="/register">Sign up now!</a>
+            </div>
+            <form action="/login" method="POST">
+           <div>
+               <label for="Username">Username:</label>
+                <input type="text" name="username" placeholder="username" required />
+            </div>
+
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" placeholder="Password" minlength="8" required />
+            </div>
+
+            <div>
+                <input type="submit" value="Login">
+            </div>
+
+            <div>
+                <button>
+                    <a href="/auth/google" role="button">Login or Register with Google</a>
+                </button>
+            </div>
+        </form>
+        </main>
+    </div>
+
+    <%- include('../partials/footer') -%> 

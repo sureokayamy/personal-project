@@ -7,7 +7,28 @@
             <div class="help"><p>?</p>
                 <div class="help-tooltip">Admin will use this page to add/edit dining options</div>
             </div>
-            
+
+            <button><a href="/logout">Logout</a></button>
+
+            <form>
+                
+                    <a href="/admin/create">Create NEW restaurant <span> !</span></a>
+            </form>
+
+            <!-- Add option to sort from a-z, etc -->
+
+            <% for (restaurant of allRestaurants) { %>
+                <div class="admin-box">
+                        <div>
+                            <h3><%= restaurant.name %></h3>
+                            <a href="/admin/update/<%= restaurant._id %>"><button type="submit">edit<span> !</span></button></a>
+                            <form action="/app/<%= restaurant._id%>?_method=DELETE" method="POST" enctype="x-www-form-urlencoded">
+                                <button type="submit">delete<span> !</span></button>
+                            </form>
+                        </div>
+                </div>
+            <% } %>
+
         </main>
     </div>
 

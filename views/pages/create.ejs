@@ -1,0 +1,44 @@
+
+<%- include('../partials/head') -%> 
+
+<%- include('../partials/nav') -%> 
+
+    <div class="main-outer-container">
+        <main class="main-content">
+            <div class="help"><p>?</p>
+                <div class="help-tooltip"></div>
+            </div>
+            <form action="/app/:_id" method="POST" enctype="x-www-form-urlencoded">
+                <fieldset>
+                    <div class="form-input">
+                        <label for="name">Name:</label>
+                        <input type="text" name="name" id="name" minlength="1" required />
+                    </div>
+                    <div class="form-input">
+                        <label for="cuisine">Cuisine categories:</label>
+                        <input type="array" name="cuisine" id="cuisine" minlength="1" required />
+                    </div>
+                    <div class="form-input">
+                        <label for="distance">Distance: 
+                            <select id="distance" name="distance" required>
+                                <option value="1">≤1 mile</option>
+                                <option value="2">≤ 2 miles</option>
+                                <option value="3">≤ 5 miles</option>
+                                <option value="4">> 5 miles</option>
+                            </select> 
+                    </div>
+                    <div class="form-input">
+                        <label for="priceRange">Price Range:</label>
+                        <input type="number" name="priceRange" id="priceRange" min="1" max="5"  required />
+                    </div>
+                    
+                </fieldset>
+                
+                    <button type="submit">create<span >!</span>
+                
+            </form>
+
+        </main>
+    </div>
+
+    <%- include('../partials/footer') -%> 

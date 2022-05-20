@@ -1,8 +1,6 @@
-// const {v4:uuid } = require('uuid');
+const {v4:uuid } = require('uuid');
 let date = new Date();
 
-module.exports = [
-    {
+module.exports = {
     year: date.getFullYear()
-},
-];
+}

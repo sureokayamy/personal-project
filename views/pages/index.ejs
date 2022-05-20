@@ -12,7 +12,7 @@
                 <fieldset>
                     <div class="form-input">
                         <label for="numDiners">How many people are eating together?</label>
-                        <input type="number" name="numDiners" id="numDiners" placeholder="#" min="2" max="8">
+                        <input type="number" name="numDiners" id="numDiners" placeholder="#" min="2" max="8" required />
                     </div>
                     <!-- <div>
                         <label for="zipcode">zipcode</label>
@@ -20,19 +20,19 @@
                     </div> -->
                     <div class="form-input">
                         <label for="distance">The restaurant should be 
-                            <select id="distance" name="distance">
+                            <select id="distance" name="distance" required>
                                 <option value="1">≤1 mile</option>
                                 <option value="2">≤ 2 miles</option>
                                 <option value="3">≤ 5 miles</option>
-                                <option value="4">≥ 5 miles</option>
+                                <option value="4">> 5 miles</option>
                             </select> away from <label for="zipcode"></label>
-                        <input type="zipcode" name="zipcode" id="zipcode" placeholder="enter zipcode">.</label>
+                        <input type="zipcode" name="zipcode" id="zipcode" minlength="5" maxlength="5" required />.</label>
                         
                     </div>
 
                     <div class="form-input">
                         <label for="priceRange">What should the price range of the restaurant be?</label>
-                        <select id="priceRange" name="priceRange">
+                        <select id="priceRange" name="priceRange" required >
                             <option value="1">$</option>
                             <option value="2">$$</option>
                             <option value="3">$$$</option>

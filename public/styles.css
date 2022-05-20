@@ -132,6 +132,11 @@ body {
     visibility: visible;
 }
 
+.admin-box {
+    border: 2px solid var(--pink);
+    border-radius: 10px;
+}
+
 /* Ranked Results Styling */
 
 .results-ranking {
@@ -437,5 +442,4 @@ fieldset {
         min-width: 40vw;
         max-width: 55vw;
     }
-
 }

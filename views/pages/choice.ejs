@@ -11,9 +11,11 @@
             </div>
             <form action="/app/choice" method="POST">
                 <!-- Add loop here to generate number of fieldsets based on # of diners entered in previous step -->
-                <%  for (let i = 2; i <= <numDiners; i++) { %>
+                <%console.log(diners.numDiners); %>
+                <% for (let i = 2; i <= diners.numDiners; i++) { %>
+                
                 <%- include('../partials/choice-form') -%>
-                <% } %>
+                    <% } %>
                 <!-- <a href="/app/result"> -->
                     <button type="submit">yum<span >!</span></button>
                 <!-- </a> -->

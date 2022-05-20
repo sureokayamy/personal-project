@@ -11,5 +11,9 @@ router.route('/choice')
     .post(appCtrl.choice_post);
 router.route('/result')
     .get(appCtrl.result);
+router.route('/:_id')
+    .put(appCtrl.update)
+    .post(appCtrl.create)
+    .delete(appCtrl.delete);
 
  module.exports = router;
