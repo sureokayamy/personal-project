@@ -7,28 +7,36 @@
             <div class="help"><p>?</p>
                 <div class="help-tooltip">Admin will use this page to add/edit dining options</div>
             </div>
-
-            <button><a href="/logout">Logout</a></button>
-
-            <form>
-                
-                    <a href="/admin/create">Create NEW restaurant <span> !</span></a>
-            </form>
+            <div class="admin-btn-box">
+                <form action="/admin/create" method="GET">
+                        <button type="submit">Create NEW restaurant <span> !</span></button>
+                </form>
+            </div>
 
             <!-- Add option to sort from a-z, etc -->
 
+            <div class="admin">
             <% for (restaurant of allRestaurants) { %>
                 <div class="admin-box">
                         <div>
-                            <h3><%= restaurant.name %></h3>
-                            <a href="/admin/update/<%= restaurant._id %>"><button type="submit">edit<span> !</span></button></a>
-                            <form action="/app/<%= restaurant._id%>?_method=DELETE" method="POST" enctype="x-www-form-urlencoded">
-                                <button type="submit">delete<span> !</span></button>
-                            </form>
+                            <h4><%= restaurant.name %></h4>
+
+                            <div class="admin-btn-box">
+                                <form action="/admin/update/<%= restaurant._id %>" method="GET">
+                                        <button type="submit">edit<span> !</span></button>
+                                </form>
+                                <form action="/app/<%= restaurant._id%>?_method=DELETE" method="POST" enctype="x-www-form-urlencoded">
+                                    <button type="submit">delete<span> !</span></button>
+                                </form>
+                            </div>
+                            
                         </div>
                 </div>
             <% } %>
-
+            </div>
+            <form action="/logout" method="GET">
+                <button type="submit">logout <span> !</span></button>
+            </form>
         </main>
     </div>
 

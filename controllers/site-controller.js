@@ -2,7 +2,6 @@ const UserInfoError = require('passport-google-oauth20/lib/errors/userinfoerror'
 const res = require('express/lib/response');
 const passport = require('passport');
 const siteData = require('../data/siteData');
-// const Choice = require('../models/choiceModel');
 const User = require('../models/userModel');
 
 module.exports = {
@@ -53,7 +52,7 @@ module.exports = {
     register_post: (req, res) => {
         const user = req.body;
         User.register({username: user.username}, user.password, (err) => {
-            if (error) {
+            if (err) {
                 console.log(error);
                 res.redirect('/register')
             } else {

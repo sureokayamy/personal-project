@@ -81,7 +81,17 @@ module.exports = {
             priceRange: priceRange
         });
 
-        newDiners.save();
+        let diners;
+        newDiners.save(function (err, diners) {
+            console.log(diners._id);
+            diners = diners;
+        });
+
+        // book1.save(function (err, book) {
+        //     if (err) return console.error(err);
+        //     console.log(book.name + " saved to bookstore collection.");
+        //   });
+      
 
         res.redirect('/app/choice');
     },

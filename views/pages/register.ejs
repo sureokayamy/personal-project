@@ -7,25 +7,29 @@
             <div>
                 Already have an account? <a href="/login">Sign in here!</a>
             </div>
-            <form action="/login" method="POST">
+            <form action="/register" method="POST">
            <div>
-               <label for="Username">Username:</label>
-                <input type="text" name="username" placeholder="username" required />
+               <label for="username">Username:</label>
+                <input type="text" name="username" id="username" placeholder="username" required />
             </div>
 
             <div>
                 <label for="password">Password:</label>
-                <input type="password" name="password" id="password" placeholder="Password" minlength="8" required />
+                <input type="password" name="password" id="password" placeholder="password" minlength="8" required />
             </div>
 
             <div>
-                <input type="submit" value="Sign Up">
+                <button type="submit">sign up</button>
             </div>
+            </form>
+
 
             <div>
-                <button>
-                    <a href="/auth/google" role="button">Login or Register with Google</a>
-                </button>
+                <form action="/auth/google" method="GET">
+                        <button type="submit">
+                            login or register with google
+                        </button>
+                </form>
             </div>
         </form>
         </main>

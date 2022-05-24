@@ -15,19 +15,22 @@
 
             <div>
                 <label for="password">Password:</label>
-                <input type="password" name="password" id="password" placeholder="Password" minlength="8" required />
+                <input type="password" name="password" id="password" placeholder="password" minlength="8" required />
             </div>
 
             <div>
-                <input type="submit" value="Login">
+                <button type="submit">login</button>
             </div>
+            </form>
 
             <div>
-                <button>
-                    <a href="/auth/google" role="button">Login or Register with Google</a>
+                <form action="/auth/google" method="GET">
+                <button type="submit">
+                    login or legister with google
                 </button>
+            </form>
             </div>
-        </form>
+        
         </main>
     </div>
 

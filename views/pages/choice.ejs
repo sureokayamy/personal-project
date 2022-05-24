@@ -9,9 +9,9 @@
             <div class="help"><p>?</p>
                 <div class="help-tooltip">What do you want to eat? Each diner will enter their top three choices ranked in order of preference. Each diner must select a different option for each choice, no brute-forcing your way to pizza.</div>
             </div>
-            <form action="/app/choice" method="POST">
+            <form action="/app/choice" method="POST" id="choiceForm">
                 <!-- Add loop here to generate number of fieldsets based on # of diners entered in previous step -->
-                <%console.log(diners.numDiners); %>
+                <%= diners.numDiners %>
                 <% for (let i = 2; i <= diners.numDiners; i++) { %>
                 
                 <%- include('../partials/choice-form') -%>

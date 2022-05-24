@@ -81,7 +81,31 @@ body {
     flex-direction: column;
     justify-content: center;
     box-shadow: 3px 3px var(--yellow), 6px 6px var(--pink), 9px 9px var(--teal), 12px 12px var(--purple);
-    
+}
+
+.admin {
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.admin-box {
+    border: 3px solid var(--purple);
+    box-shadow: 2px 2px var(--yellow), 4px 4px var(--pink), 6px 6px var(--teal), 8px 8px var(--purple);
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+    min-width: 200px;
+    max-width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin-btn-box {
+    display: flex;
+    flex-direction: row;
 }
 
 .help {
@@ -132,10 +156,7 @@ body {
     visibility: visible;
 }
 
-.admin-box {
-    border: 2px solid var(--pink);
-    border-radius: 10px;
-}
+
 
 /* Ranked Results Styling */
 
