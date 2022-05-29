@@ -166,31 +166,27 @@ body {
  justify-content: space-around;
  color: var(--purple);
 }
-.first {
+.place1 {
     font-size: 3rem;
     border-radius: 10px;
     /* box-shadow: 0px 0px 0px 3px var(--yellow), 0px 0px 0px 6px var(--pink), 0px 0px 0px 9px var(--teal), 0px 0px 0px 12px var(--purple); */
     padding: 5px;
 }
 
-.second {
+.place2 {
     font-size: 2.5rem;
 }
 
-.third {
+.place3 {
     font-size: 2rem;
 }
 
-.fourth {
+.place4 {
     font-size: 1.5rem;
 }
 
-.fifth {
-    font-size: 1rem;
-}
-
-.sixth {
-    font-size: .75rem;
+.place5 {
+    font-size: 1.25rem;
 }
 
 /* Challenge Styling */
@@ -212,6 +208,7 @@ fieldset {
     border: 1px solid var(--purple);
     border-radius: 10px;
     margin-bottom: 10px;
+    /* box-shadow: 1px 1px var(--yellow), 2px 2px var(--pink), 3px 3px var(--teal), 4px 4px var(--purple); */
 }
 
 fieldset legend {
@@ -312,7 +309,7 @@ input[type=submit] {
 }
 
 button > span {
-    visibility: hidden;
+    display: none;
 }
 
 button:hover  {
@@ -328,7 +325,7 @@ button:active {
 }
 
 button:active > span {
-    visibility: visible;
+    display: inline;
 }
 
 /* Footer styling */

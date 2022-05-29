@@ -2,6 +2,9 @@ const mongoose = require('mongoose');
 const {Schema} = mongoose;
 
 const dinersSchema = new Schema({
+    dinerID: {
+        type: Number,
+    },
     numDiners: {
         type: Number,
         required: [true, 'The number of diners is required.'],

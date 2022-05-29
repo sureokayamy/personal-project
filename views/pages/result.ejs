@@ -8,13 +8,26 @@
                 <div class="help-tooltip">Don't like the results? Click on "Challenge" below to randomly select a winner among the top-ranked choices.</div>
             </div>
 
+            
+
             <div class="results-ranking">
-                <div class="first">✨Example 1✨</div>
+                
+                <% for (let i = 0; i < resultArray.length; i++) { %>
+                    <div class="place<%= i + 1 %>">The #<%= i + 1 %> choice is <%= resultArray[i] %></div>
+                    <div class="place<%= i + 1%>">
+                        <% for (restaurant of allRestaurants) { %>
+                            <% if (restaurant.cuisine.includes(resultArray[i]) == true) { %>
+                                <a href="#"><%= restaurant.name %></a>
+                            <% } %> 
+                        <% } %>
+                    </div>
+                    <% } %>
+                <!-- <div class="first">✨Example 1✨</div>
                 <div class="second">Example 2</div>
                 <div class="third">Example 3</div>
                 <div class="fourth">Example 4</div>
                 <div class="fifth">Example 5</div>
-                <div class="sixth">Example 6</div>
+                <div class="sixth">Example 6</div> -->
                 <a href="/app/challenge"><button type="submit">challenge<span >!</span></button></a>
             </div>
 

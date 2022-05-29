@@ -1,6 +1,4 @@
-// const Choice = require('../../models/choiceModel');
-// const Restaurant = require('../../models/restaurantModel');
-// const Diners = require('../../models/dinersModel');
+
 
 console.log('Scripts is connected!');
 
