@@ -13,21 +13,44 @@
             <div class="results-ranking">
                 
                 <% for (let i = 0; i < resultArray.length; i++) { %>
-                    <div class="place<%= i + 1 %>">The #<%= i + 1 %> choice is <%= resultArray[i] %></div>
-                    <div class="place<%= i + 1%>">
-                        <% for (restaurant of allRestaurants) { %>
-                            <% if (restaurant.cuisine.includes(resultArray[i]) == true) { %>
-                                <a href="#"><%= restaurant.name %></a>
-                            <% } %> 
-                        <% } %>
+                    <div class="place<%= i + 1 %>">The #<%= i + 1 %> choice is <span class="result-bold"><%= resultArray[i].name %></span> with <%= resultArray[i].total %> points!
+                        <div class=" result-outer">
+
+                            <% for (restaurant of allRestaurants) { %>
+                                <% if (restaurant.cuisine.includes(resultArray[i].cuisine) == true) { %>
+                                    <a href="#">
+                                        <div class="result-box">
+                                        <h3><%= restaurant.name %></h3>
+                                            <ul>
+                                                <li>Price: 
+                                                    <%for (let i = 1; i <= restaurant.priceRange; i++) { %>
+                                                        $
+                                                <%  }%>
+                                                </li>
+                                                    
+                                                
+                                                <li>
+                                                    <% if (restaurant.distance == 1) {%>
+                                                    <%=restaurant.distance%> mile away <%} else {%>
+                                                    <%=restaurant.distance%> miles away
+                                                    <%}%>
+                                                </li>
+
+                                                <%if (restaurant.minorityOO == true) {%>
+                                                    <li>Minority Owned & Operated</li>
+                                                <%} else {%>
+                                                    <li>&nbsp;</li>
+                                                    <%}%>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                <% } %> 
+                            <% } %>
+                        </div>
+                        <hr>
                     </div>
                     <% } %>
-                <!-- <div class="first">✨Example 1✨</div>
-                <div class="second">Example 2</div>
-                <div class="third">Example 3</div>
-                <div class="fourth">Example 4</div>
-                <div class="fifth">Example 5</div>
-                <div class="sixth">Example 6</div> -->
+        
                 <a href="/app/challenge"><button type="submit">challenge<span >!</span></button></a>
             </div>
 

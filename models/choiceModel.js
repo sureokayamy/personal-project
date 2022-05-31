@@ -77,6 +77,78 @@ const choiceSchema = new Schema({
         min: [1, 'Please make a selection for your third choice.'],
         max: [10, 'Please make a selection for your third choice.']
     },
+    diner5choice1: {
+        type: Number,
+        required: [false, 'Please enter your first choice.'],
+        min: [1, 'Please make a selection for your first choice.'],
+        max: [10, 'Please make a selection for your first choice.']
+    },
+    diner5choice2: {
+        type: Number,
+        required: [false, 'Please enter your second choice.'],
+        min: [1, 'Please make a selection for your second choice.'],
+        max: [10, 'Please make a selection for your second choice.']
+    },
+    diner5choice3: {
+        type: Number,
+        required: [false, 'Please enter your third choice.'],
+        min: [1, 'Please make a selection for your third choice.'],
+        max: [10, 'Please make a selection for your third choice.']
+    },
+    diner6choice1: {
+        type: Number,
+        required: [false, 'Please enter your first choice.'],
+        min: [1, 'Please make a selection for your first choice.'],
+        max: [10, 'Please make a selection for your first choice.']
+    },
+    diner6choice2: {
+        type: Number,
+        required: [false, 'Please enter your second choice.'],
+        min: [1, 'Please make a selection for your second choice.'],
+        max: [10, 'Please make a selection for your second choice.']
+    },
+    diner6choice3: {
+        type: Number,
+        required: [false, 'Please enter your third choice.'],
+        min: [1, 'Please make a selection for your third choice.'],
+        max: [10, 'Please make a selection for your third choice.']
+    },
+    diner7choice1: {
+        type: Number,
+        required: [false, 'Please enter your first choice.'],
+        min: [1, 'Please make a selection for your first choice.'],
+        max: [10, 'Please make a selection for your first choice.']
+    },
+    diner7choice2: {
+        type: Number,
+        required: [false, 'Please enter your second choice.'],
+        min: [1, 'Please make a selection for your second choice.'],
+        max: [10, 'Please make a selection for your second choice.']
+    },
+    diner7choice3: {
+        type: Number,
+        required: [false, 'Please enter your third choice.'],
+        min: [1, 'Please make a selection for your third choice.'],
+        max: [10, 'Please make a selection for your third choice.']
+    },
+    diner8choice1: {
+        type: Number,
+        required: [false, 'Please enter your first choice.'],
+        min: [1, 'Please make a selection for your first choice.'],
+        max: [10, 'Please make a selection for your first choice.']
+    },
+    diner8choice2: {
+        type: Number,
+        required: [false, 'Please enter your second choice.'],
+        min: [1, 'Please make a selection for your second choice.'],
+        max: [10, 'Please make a selection for your second choice.']
+    },
+    diner8choice3: {
+        type: Number,
+        required: [false, 'Please enter your third choice.'],
+        min: [1, 'Please make a selection for your third choice.'],
+        max: [10, 'Please make a selection for your third choice.']
+    },
     allergy: {
         type: String,
         required: [false, ''],
