@@ -8,9 +8,9 @@
                 <div class="help-tooltip">Clicking on "Fight" below will randomly pick one of the top-ranked choices :)</div>
             </div>
             <div class="challenge">
-                <%for (option of resultArray) { %>
-                    <%= resultArray.name %>
-                <%}%>
+                
+                    <p><%= resultArray[0].name %></p>
+                
                 <span>🤼</span>
                 <button type="submit">fight<span >!</span></button>
             </div>

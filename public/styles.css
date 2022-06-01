@@ -253,6 +253,7 @@ hr {
     display:flex;
     flex-direction: column;
     justify-content: center;
+    border: 5px solid red;
 }
 
 /* Form Styling */
