@@ -30,10 +30,15 @@
                                                     
                                                 
                                                 <li>
-                                                    <% if (restaurant.distance == 1) {%>
-                                                    <%=restaurant.distance%> mile away <%} else {%>
-                                                    <%=restaurant.distance%> miles away
-                                                    <%}%>
+                                                    <% if (restaurant.distance == 1) { %>
+                                                        <%= restaurant.distance%> mile away
+                                                    <%} else if (restaurant.distance == 2) { %>
+                                                        &le; 2 miles away
+                                                    <%} else if (restaurant.distance == 3) { %>
+                                                        &le; 5 miles away
+                                                    <%} else if (restaurant.distance == 4) { %>
+                                                        5+ miles away
+                                                    <%};%>
                                                 </li>
 
                                                 <%if (restaurant.minorityOO == true) {%>
@@ -42,6 +47,7 @@
                                                     <li>&nbsp;</li>
                                                     <%}%>
                                             </ul>
+                                            <div class="emoji">&#<%= restaurant.emoji%>;</div>
                                         </div>
                                     </a>
                                 <% } %> 
@@ -53,6 +59,10 @@
         
                 <a href="/app/challenge"><button type="submit">challenge<span >!</span></button></a>
             </div>
+
+            <form action="/" method="GET">
+                <button type="submit">start over<span >!</span></button>
+            </form>
 
         </main>
     </div>

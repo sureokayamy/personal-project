@@ -137,6 +137,8 @@ body {
 
 .main-content a:hover, .main-content a:active {
     text-decoration: underline;
+    text-decoration-style: wavy;
+    text-underline-offset: 2px;
 }
 
 .help p {
@@ -171,7 +173,7 @@ body {
 .results-ranking {
  display: flex;
  flex-direction: column;
- justify-content: space-around;
+ justify-content: space-between;
  color: var(--purple);
 }
 
@@ -184,33 +186,39 @@ hr {
     font-size: 3rem;
     /* box-shadow: 0px 0px 0px 3px var(--yellow), 0px 0px 0px 6px var(--pink), 0px 0px 0px 9px var(--teal), 0px 0px 0px 12px var(--purple); */
     padding: 8px;
+    text-align: center;
 }
 
 .place2 {
     font-size: 2.5rem;
     padding: 5px;
+    text-align: center;
 }
 
 .place3 {
     font-size: 2rem;
     padding: 5px;
+    text-align: center;
 }
 
 .place4 {
     font-size: 1.5rem;
     padding: 5px;
+    text-align: center;
 }
 
 .place5 {
     font-size: 1.25rem;
     padding: 5px;
+    text-align: center;
 }
 
 .result-outer {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-content: center;
-    
+    flex-wrap: wrap;
 }
 .result-box {
     color: var(--palegreen);
@@ -246,14 +254,18 @@ hr {
     font-weight: bolder;
 }
 
+.emoji {
+    text-align: center;
+    font-size: 1.4rem;
+}
+
 /* Challenge Styling */
 
 .challenge {
-    font-size: 6rem;
+    font-size: 1.3rem;
     display:flex;
     flex-direction: column;
     justify-content: center;
-    border: 5px solid red;
 }
 
 /* Form Styling */
@@ -309,6 +321,7 @@ input, select {
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
 color: var(--teal);
 opacity: 1; /* Firefox */
+font-size: 1.1rem;
 }
 
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
@@ -319,12 +332,17 @@ color: var(--teal);
 color: var(--teal);
 }
 
+.login-register {
+    margin-top: 5px;
+}
+
 .dietary {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
     /* justify-content: space-around; */
-    align-content: flex-start;
+    /* align-content: flex-start; */
+    display: none;
 }
 
 .dietary-needs-outer {

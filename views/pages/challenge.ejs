@@ -5,14 +5,54 @@
     <div class="main-outer-container">
         <main class="main-content">
             <div class="help"><p>?</p>
-                <div class="help-tooltip">Clicking on "Fight" below will randomly pick one of the top-ranked choices :)</div>
+                <div class="help-tooltip">Hope you like <%= challengeWinnder.name %> cuz now you're stuck with it ;)</div>
             </div>
             <div class="challenge">
                 
-                    <p><%= resultArray[0].name %></p>
-                
-                <span>🤼</span>
-                <button type="submit">fight<span >!</span></button>
+                    <p>The Diinder Wiinder is <span class="result-bold"><%= challengeWinnder.name %></span>!</p>
+
+                    <div class="result-outer">
+                    <% for (restaurant of allRestaurants) { %>
+                        <% if (restaurant.cuisine.includes(challengeWinnder.cuisine) == true) { %>
+                            <a href="#">
+                                <div class="result-box">
+                                <h3><%= restaurant.name %></h3>
+                                    <ul>
+                                        <li>Price: 
+                                            <%for (let i = 1; i <= restaurant.priceRange; i++) { %>
+                                                $
+                                        <%  }%>
+                                        </li>
+                                            
+                                        
+                                        <li>
+                                            <% if (restaurant.distance == 1) { %>
+                                                <%= restaurant.distance%> mile away
+                                            <%} else if (restaurant.distance == 2) { %>
+                                                1-2 miles away
+                                            <%} else if (restaurant.distance == 3) { %>
+                                                2-5 miles away
+                                            <%} else if (restaurant.distance == 4) { %>
+                                                5+ miles away
+                                            <%};%>
+                                        </li>
+
+                                        <%if (restaurant.minorityOO == true) {%>
+                                            <li>Minority Owned & Operated</li>
+                                        <%} else {%>
+                                            <li>&nbsp;</li>
+                                            <%}%>
+                                    </ul>
+                                    <div class="emoji">&#<%= restaurant.emoji%>;</div>
+                                </div>
+                            </a>
+                        <% } %> 
+                    <% } %>
+                </div>
+                <form action="/" method="GET">
+                    <button type="submit">start over<span >!</span></button>
+                </form>
+                    
             </div>
         </main>
     </div>

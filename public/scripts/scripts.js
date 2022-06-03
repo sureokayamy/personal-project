@@ -67,3 +67,18 @@ const addIs = (numDiners) => {
 //add event listener for when choices form is posted, store all info in variables then calculate the winner winner chicken dinner!
 
 //add event listener for when challenge button is pushed, then a randomizer
+
+
+
+let distance = 3;
+
+if (distance == 1) {
+    distance = '1 mile away';
+} else if (distance == 2) {
+    distance = '2 miles away';
+} else if (distance == 3) {
+    distance = '3 miles away';
+} else if (distance == 4) {
+    distance = '4 miles away';
+};
+    

@@ -18,6 +18,9 @@ const restaurantSchema = new Schema({
         min: [1, 'Minimum is 1, or $.'],
         max: [5, 'Maximum is 5, or no range limit.']
     },
+    emoji: {
+        type: String
+    },
     dineIn: {
         type: Boolean
     },
