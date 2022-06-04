@@ -7,92 +7,92 @@
     <div class="main-outer-container">
         <main class="main-content">
             <div class="help"><p>?</p>
-                <div class="help-tooltip">What do you want to eat? Each diner will enter their top three choices ranked in order of preference. Each diner must select a different option for each choice, no brute-forcing your way to pizza.</div>
+                <div class="help-tooltip">What do YOU want to eat? Each diner will enter their top three choices ranked in order of preference. Each diner shoooould select a different option for each choice, please don't brute-force your way to pizza--but Diinder won't stop you &#129302;</div>
             </div>
             <form action="/app/choice" method="POST" id="choiceForm">
                 <!-- Add loop here to generate number of fieldsets based on # of diners entered in previous step -->
                 
                 
                 <% for (let i = 2; i <= diners.numDiners + 1; i++) { %>
-                
+                    <div class="emoji">🍔🍜🍕🍗🍝🍰🍣🍻</div>
                     <!-- < include('../partials/choice-form') -> -->
                         <!-- Diner enters their criteia -->
-    <fieldset class="border-fieldset">
-        <legend>diner #<%= i-1 %></legend>
-        <div class="form-input">
-            <label for="diner<%= i-1 %>choice1">Enter your first choice:</label>
-            <select name="diner<%= i-1 %>choice1" id="diner<%= i %>choice1" required>
-                <option value="1">SUSHI</option>
-                <option value="2">PIZZA</option>
-                <option value="3">SALAD</option>
-                <option value="4">DINER</option>
-                <option value="5">BURRITO</option>
-                <option value="6">THAI</option>
-                <option value="7">FRENCH</option>
-                <option value="8">HOT POT</option>
-                <option value="9">BURGER</option>
-                <option value="10">DESSERT</option>
-            </select>
-        </div>
- 
-        <div class="form-input">
-            <label for="diner<%= i-1 %>choice2">Enter your second choice:</label>
-            <select name="diner<%= i-1 %>choice2" id="diner<%= i-1 %>choice2" required>
-                <option value="1">SUSHI</option>
-                <option value="2">PIZZA</option>
-                <option value="3">SALAD</option>
-                <option value="4">DINER</option>
-                <option value="5">BURRITO</option>
-                <option value="6">THAI</option>
-                <option value="7">FRENCH</option>
-                <option value="8">HOT POT</option>
-                <option value="9">BURGER</option>
-                <option value="10">DESSERT</option>
-            </select>
-        </div>
+                <fieldset class="border-fieldset">
+                    <legend>diner #<%= i-1 %></legend>
+                    <div class="form-input">
+                        <label for="diner<%= i-1 %>choice1">Enter your first choice:</label>
+                        <select name="diner<%= i-1 %>choice1" id="diner<%= i %>choice1" required>
+                            <option value="1">SUSHI</option>
+                            <option value="2">PIZZA</option>
+                            <option value="3">SALAD</option>
+                            <option value="4">DINER</option>
+                            <option value="5">BURRITO</option>
+                            <option value="6">THAI</option>
+                            <option value="7">FRENCH</option>
+                            <option value="8">HOT POT</option>
+                            <option value="9">BURGER</option>
+                            <option value="10">DESSERT</option>
+                        </select>
+                    </div>
+            
+                    <div class="form-input">
+                        <label for="diner<%= i-1 %>choice2">Enter your second choice:</label>
+                        <select name="diner<%= i-1 %>choice2" id="diner<%= i-1 %>choice2" required>
+                            <option value="1">SUSHI</option>
+                            <option value="2">PIZZA</option>
+                            <option value="3">SALAD</option>
+                            <option value="4">DINER</option>
+                            <option value="5">BURRITO</option>
+                            <option value="6">THAI</option>
+                            <option value="7">FRENCH</option>
+                            <option value="8">HOT POT</option>
+                            <option value="9">BURGER</option>
+                            <option value="10">DESSERT</option>
+                        </select>
+                    </div>
 
-        <div class="form-input">
-            <label for="diner<%= i-1 %>choice3">Enter your third choice:</label>
-            <select name="diner<%= i-1 %>choice3" id="diner<%= i-1 %>choice3" required>
-                <option value="1">SUSHI</option>
-                <option value="2">PIZZA</option>
-                <option value="3">SALAD</option>
-                <option value="4">DINER</option>
-                <option value="5">BURRITO</option>
-                <option value="6">THAI</option>
-                <option value="7">FRENCH</option>
-                <option value="8">HOT POT</option>
-                <option value="9">BURGER</option>
-                <option value="10">DESSERT</option>
-            </select>
-        </div>
-        
-        <div class="form-input dietary">
-            <label for="dietary" name="dietary">Any dietary needs?</label>
+                    <div class="form-input">
+                        <label for="diner<%= i-1 %>choice3">Enter your third choice:</label>
+                        <select name="diner<%= i-1 %>choice3" id="diner<%= i-1 %>choice3" required>
+                            <option value="1">SUSHI</option>
+                            <option value="2">PIZZA</option>
+                            <option value="3">SALAD</option>
+                            <option value="4">DINER</option>
+                            <option value="5">BURRITO</option>
+                            <option value="6">THAI</option>
+                            <option value="7">FRENCH</option>
+                            <option value="8">HOT POT</option>
+                            <option value="9">BURGER</option>
+                            <option value="10">DESSERT</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-input dietary">
+                        <label for="dietary" name="dietary">Any dietary needs?</label>
 
-            <div class="dietary">
+                        <div class="dietary">
 
-                <!-- Allergy Checkbox -->
-                <div class="dietary-needs-outer"><input type="checkbox" id="allergy" value="allergy" name="allergy"><label for="allergy" class="dietary-needs">Allergy</label></div>
+                            <!-- Allergy Checkbox -->
+                            <div class="dietary-needs-outer"><input type="checkbox" id="allergy" value="allergy" name="allergy"><label for="allergy" class="dietary-needs">Allergy</label></div>
 
-                <!-- Gluten Free Checkbox -->
-                <div class="dietary-needs-outer"><input type="checkbox" id="gluten-free" value="gluten-free" name="gluten-free"><label for="gluten-free" class="dietary-needs">Gluten-free</label></div>
+                            <!-- Gluten Free Checkbox -->
+                            <div class="dietary-needs-outer"><input type="checkbox" id="gluten-free" value="gluten-free" name="gluten-free"><label for="gluten-free" class="dietary-needs">Gluten-free</label></div>
 
-                <!-- Halal Checkbox -->
-                <div class="dietary-needs-outer"><input type="checkbox" id="halal" value="halal" name="halal"><label for="halal" class="dietary-needs">Halal</label></div>
+                            <!-- Halal Checkbox -->
+                            <div class="dietary-needs-outer"><input type="checkbox" id="halal" value="halal" name="halal"><label for="halal" class="dietary-needs">Halal</label></div>
 
-                <!-- Kosher Checkbox -->
-                <div class="dietary-needs-outer"><input type="checkbox" id="kosher" value="kosher" name="kosher"><label for="kosher" class="dietary-needs">Kosher</label></div>
+                            <!-- Kosher Checkbox -->
+                            <div class="dietary-needs-outer"><input type="checkbox" id="kosher" value="kosher" name="kosher"><label for="kosher" class="dietary-needs">Kosher</label></div>
 
-                <!-- Vegan Checkbox -->
-                <div class="dietary-needs-outer"><input type="checkbox" id="vegan" value="vegan" name="vegan"><label for="vegan" class="dietary-needs">Vegan</label></div>
+                            <!-- Vegan Checkbox -->
+                            <div class="dietary-needs-outer"><input type="checkbox" id="vegan" value="vegan" name="vegan"><label for="vegan" class="dietary-needs">Vegan</label></div>
 
-                <!-- Vegetarian Checkbox -->
-                <div class="dietary-needs-outer"><input type="checkbox" id="vegetarian" value="vegetarian" name="vegetarian"><label for="vegetarian" class="dietary-needs">Vegetarian</label></div>
-            </div>
+                            <!-- Vegetarian Checkbox -->
+                            <div class="dietary-needs-outer"><input type="checkbox" id="vegetarian" value="vegetarian" name="vegetarian"><label for="vegetarian" class="dietary-needs">Vegetarian</label></div>
+                        </div>
 
-        </div>
-    </fieldset>
+                    </div>
+                </fieldset>
                     <% } %>
                 <!-- <a href="/app/result"> -->
                     <button type="submit">let's eat<span>!</span></button>

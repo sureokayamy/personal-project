@@ -5,11 +5,11 @@
     <div class="main-outer-container">
         <main class="main-content">
             <div class="help"><p>?</p>
-                <div class="help-tooltip">Hope you like <%= challengeWinnder.name %> cuz now you're stuck with it ;)</div>
+                <div class="help-tooltip">If you really don't want <%= challengeWinnder.name %>, start over!</div>
             </div>
             <div class="challenge">
                 
-                    <p>The Diinder Wiinder is <span class="result-bold"><%= challengeWinnder.name %></span>!</p>
+                    <p>Hope you like <span class="result-bold"><%= challengeWinnder.name %></span> cuz now you're stuck with it! &#128523;</p>
 
                     <div class="result-outer">
                     <% for (restaurant of allRestaurants) { %>
@@ -29,9 +29,9 @@
                                             <% if (restaurant.distance == 1) { %>
                                                 <%= restaurant.distance%> mile away
                                             <%} else if (restaurant.distance == 2) { %>
-                                                1-2 miles away
+                                                &le; 2 miles away
                                             <%} else if (restaurant.distance == 3) { %>
-                                                2-5 miles away
+                                                &le; 5 miles away
                                             <%} else if (restaurant.distance == 4) { %>
                                                 5+ miles away
                                             <%};%>

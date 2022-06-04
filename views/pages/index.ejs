@@ -6,12 +6,13 @@
     <div class="main-outer-container">
         <main class="main-content">
             <div class="help"><p>?</p>
-                <div class="help-tooltip">Can't decide what or where to eat? Enter some basic info here to get started and we'll help you decide!</div>
+                <div class="help-tooltip">Can't decide what or where to eat? Enter some basic info here to get started and Diinder will help you decide!</div>
             </div>
+            <div class="emoji">🍔🍜🍕🍗🍝🍰🍣🍻</div>
             <form action="/app" method="POST">
                 <fieldset>
                     <div class="form-input">
-                        <label for="numDiners">How many people are eating together?</label>
+                        <label for="numDiners">How many people are dining together?</label>
                         <input type="number" name="numDiners" id="numDiners" placeholder="#" min="2" max="8" required />
                     </div>
                     <!-- <div>
@@ -26,7 +27,7 @@
                                 <option value="3">≤ 5 MILES</option>
                                 <option value="4">> 5 MILES</option>
                             </select> <label for="zipcode">away from </label>
-                        <input type="text" pattern="[0-9]*" name="zipcode" id="zipcode" minlength="5" maxlength="5" placeholder="ZIPCODE" required />.</label>
+                        <input type="text" pattern="[0-9]*" name="zipcode" id="zipcode" minlength="5" maxlength="5" placeholder="ZIPCODE" required /></label>
                         
                     </div>
 
@@ -43,11 +44,8 @@
                 </fieldset>
                 <!-- <a href="/app/choice"> -->
                     <button type="submit" id="diner-button">start<span >!</span>
-                    
                 <!-- </a> -->
-                
             </form>
-                
         </main>
     </div>
 

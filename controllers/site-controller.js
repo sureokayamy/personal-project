@@ -43,25 +43,25 @@ module.exports = {
             };
         });
     },
-    register_get: (req, res) => {
-        res.render('pages/register', {
-            copyrightYear: siteData.year
-        }
-            )
-    },
-    register_post: (req, res) => {
-        const user = req.body;
-        User.register({username: user.username}, user.password, (err) => {
-            if (err) {
-                console.log(error);
-                res.redirect('/register')
-            } else {
-                passport.authenticate('local')(req, res, () => {
-                    res.redirect('/admin');
-                });
-            };
-        });
-    },
+    // register_get: (req, res) => {
+    //     res.render('pages/register', {
+    //         copyrightYear: siteData.year
+    //     }
+    //         )
+    // },
+    // register_post: (req, res) => {
+    //     const user = req.body;
+    //     User.register({username: user.username}, user.password, (err) => {
+    //         if (err) {
+    //             console.log(error);
+    //             res.redirect('/register')
+    //         } else {
+    //             passport.authenticate('local')(req, res, () => {
+    //                 res.redirect('/admin');
+    //             });
+    //         };
+    //     });
+    // },
     google_get: passport.authenticate('google', { scope: ['openid', 'profile', 'email']}),
     google_redirect: [
         passport.authenticate('google', {failureRedirect: '/login'}), 

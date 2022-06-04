@@ -13,9 +13,9 @@ router.route('/contact')
 router.route('/login')
     .get(siteCtrl.login_get)
     .post(siteCtrl.login_post);
-router.route('/register')
-    .get(siteCtrl.register_get)
-    .post(siteCtrl.register_post);
+// router.route('/register')
+//     .get(siteCtrl.register_get)
+//     .post(siteCtrl.register_post);
 router.route('/auth/google')
     .get(siteCtrl.google_get);
 router.route('/auth/google/admin')

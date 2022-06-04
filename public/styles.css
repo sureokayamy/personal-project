@@ -89,6 +89,11 @@ body {
     flex-direction: column;
     justify-content: center;
     box-shadow: 3px 3px var(--yellow), 6px 6px var(--pink), 9px 9px var(--teal), 12px 12px var(--purple);
+    text-align: center;
+}
+
+.main-content p {
+    margin-bottom: 1em;
 }
 
 .admin {
