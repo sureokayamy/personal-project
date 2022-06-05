@@ -61,7 +61,6 @@ body {
     text-decoration: underline;
     text-decoration-style: wavy;
     text-decoration-skip-ink: auto;
-    text-decoration-color: var(--pink);
 }
 
 .nav-menu a, .nav-menu a:visited {
@@ -82,7 +81,7 @@ body {
 
 .main-content {
     border: 3px solid var(--purple);
-    width: 75vw;
+    width: 80vw;
     border-radius: 10px;
     padding: 10px;
     display:flex;
@@ -188,32 +187,31 @@ hr {
 
 }
 .place1 {
-    font-size: 3rem;
-    /* box-shadow: 0px 0px 0px 3px var(--yellow), 0px 0px 0px 6px var(--pink), 0px 0px 0px 9px var(--teal), 0px 0px 0px 12px var(--purple); */
+    font-size: 2.5rem;
     padding: 8px;
     text-align: center;
 }
 
 .place2 {
-    font-size: 2.5rem;
-    padding: 5px;
-    text-align: center;
-}
-
-.place3 {
     font-size: 2rem;
     padding: 5px;
     text-align: center;
 }
 
-.place4 {
+.place3 {
     font-size: 1.5rem;
     padding: 5px;
     text-align: center;
 }
 
+.place4 {
+    font-size: 1rem;
+    padding: 5px;
+    text-align: center;
+}
+
 .place5 {
-    font-size: 1.25rem;
+    font-size: .75rem;
     padding: 5px;
     text-align: center;
 }
@@ -248,12 +246,15 @@ hr {
     padding-bottom: 5px;
 }
 
-.result-box ul {
+.rst-detail {
     list-style: none;
     font-size: 1rem;
     font-family: 'Roboto Mono';
     text-align: left;
+    margin-left: 1.4rem;
+    margin-right: 1.4rem;
 }
+
 
 .result-bold {
     font-weight: bolder;
@@ -283,7 +284,6 @@ fieldset {
     border: 1px solid var(--purple);
     border-radius: 10px;
     margin-bottom: 10px;
-    /* box-shadow: 1px 1px var(--yellow), 2px 2px var(--pink), 3px 3px var(--teal), 4px 4px var(--purple); */
 }
 
 fieldset legend {
@@ -291,20 +291,19 @@ fieldset legend {
     font-weight: bold;
     font-size: 1.2rem;
     color: var(--pink);
-    /* Would like to change position of the legend */
-    /* float: left; */
 }
 
 form {
     display: flex;
     flex-direction: column;
-    justify-content: left;
+    text-align: center;
+    justify-content: center;
     align-items: flex-start;
     padding: 5px;
 }
 
 .form-input {
-    margin: 10px 10px;
+    margin: 10px;
     padding: 5px;
 }
 
@@ -319,8 +318,18 @@ input, select {
     font-size: 1.3rem;
     color: var(--teal);
     padding: 3px 2px;
+    margin: 5px;
     border: 2px solid var(--purple);
     border-radius: 10px;
+    text-align: center;
+}
+
+#numDiners {
+    min-width: 2.75rem;
+    max-width: 2.75rem;
+}
+#zipcode {
+    max-width: 7rem;
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -350,7 +359,7 @@ color: var(--teal);
     display: none;
 }
 
-.dietary-needs-outer {
+/* .dietary-needs-outer {
     border: 2px solid var(--purple);
     background-color: #FFFFFF;
     padding: 3px 2px;
@@ -365,7 +374,7 @@ color: var(--teal);
     color: var(--teal);
     padding: 3px 2px;
     margin-right: 5px;
-}
+} */
 
   
 button {
@@ -411,10 +420,12 @@ button:active > span {
 
 /* Footer styling */
 .footer-content {
-    width: 100vw;
+    width: 50vw;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
+    padding-top: .8rem;
+    padding-bottom: 1.6rem;
     align-items: center;
     font-size: 1.5rem;
     font-weight: bold;
@@ -444,6 +455,7 @@ button:active > span {
 .copyright {
     text-align: center;
     color: var(--palegreen);
+    padding-bottom: 2vh;
 }
 
 
@@ -482,11 +494,11 @@ body, .nav-menu, .main-outer-container, .footer-content {
     font-size: .75rem;
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 601px) {
-
-
-}
+/* .result-box {
+    min-width: 15vw;
+    max-width: 25vw;
+    font-size: .75rem;
+} */
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
@@ -504,6 +516,7 @@ body, .nav-menu, .main-outer-container, .footer-content {
 
 .main-content {
     min-width: 60vw;
+    max-width: 65vw;
 }
 
 form {
@@ -525,20 +538,19 @@ fieldset {
     }
 
     .main-content {
-        min-width: 50vw;
-        max-width: 55vw;
+        min-width: 40vw;
+        max-width: 45vw;
     }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
     .nav-menu img {
-        min-width: 40vw;
-        max-width: 45vw;
+        min-width: 20vw;
+        max-width: 35vw;
     }
 
     .main-content {
-        min-width: 40vw;
-        max-width: 55vw;
+         max-width: 40vw;
     }
 }

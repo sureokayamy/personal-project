@@ -42,7 +42,7 @@ passport.use(new GoogleStrategy({
     callbackURL: "https://diinder.herokuapp.com/auth/google/admin"
 },
 function(accessToken, refreshToken, email, cb) {
-    User.findOrCreate({googleId: email.id},
+    User.findOne({googleId: '116625834204424194902'},
         function(err, user) {
             return cb(err, user);
         });

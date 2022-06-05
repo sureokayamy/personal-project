@@ -1064,15 +1064,21 @@ module.exports = {
         })
     },
     choice: (req, res) => {
-        // const {_id} = req.params;
-        Diners.findOne({dinerID: 1}, (error, dinersInfo) => {
-            if(error) {
+        Restaurant.find({}, (error, allRestaurants) => {
+            if (error) {
                 return error;
             } else {
-                res.render('pages/choice', {
-                    copyrightYear: siteData.year,
-                    diners: dinersInfo
-                });
+                Diners.findOne({dinerID: 1}, (error, dinersInfo) => {
+                    if(error) {
+                        return error;
+                    } else {
+                        res.render('pages/choice', {
+                            copyrightYear: siteData.year,
+                            diners: dinersInfo,
+                            allRestaurants: allRestaurants
+                        });
+                    }
+                })
             }
         })
     },

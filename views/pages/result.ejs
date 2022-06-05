@@ -21,15 +21,14 @@
                                     <a href="#">
                                         <div class="result-box">
                                         <h3><%= restaurant.name %></h3>
-                                            <ul>
-                                                <li>Price: 
+                                                <div class ="rst-detail">Price: 
                                                     <%for (let i = 1; i <= restaurant.priceRange; i++) { %>
                                                         $
                                                 <%  }%>
-                                                </li>
+                                                </div>
                                                     
                                                 
-                                                <li>
+                                                <div class="rst-detail">
                                                     <% if (restaurant.distance == 1) { %>
                                                         <%= restaurant.distance%> mile away
                                                     <%} else if (restaurant.distance == 2) { %>
@@ -39,14 +38,13 @@
                                                     <%} else if (restaurant.distance == 4) { %>
                                                         5+ miles away
                                                     <%};%>
-                                                </li>
+                                                </div>
 
                                                 <%if (restaurant.minorityOO == true) {%>
-                                                    <li>Minority Owned & Operated</li>
+                                                    <div class="rst-detail">Minority Owned & Operated</div>
                                                 <%} else {%>
-                                                    <li>&nbsp;</li>
+                                                    <div class="rst-detail">&nbsp;</div>
                                                     <%}%>
-                                            </ul>
                                             <div class="emoji">&#<%= restaurant.emoji%>;</div>
                                         </div>
                                     </a>
