@@ -1072,10 +1072,38 @@ module.exports = {
                     if(error) {
                         return error;
                     } else {
+                        let cuisineArray = [];
+                        let valueCounter = 0;
+
+                        console.log('Time to check alllll the cuisine options.');
+                        for (restaurant of allRestaurants) {
+                            for (let i = 0; i < restaurant.cuisine.length; i++) {
+                                console.log(`Now checking if ${restaurant.cuisine[i]} is ALREADY in the cuisine array.`);
+                                let cuisineOption = restaurant.cuisine[i].toString();
+                                if (cuisineArray.includes(cuisineOption) == false ){
+                                    console.log(`The cuisine array does NOT include ${cuisineOption}, let's add it!`);
+                                    valueCounter++;
+                                    console.log(valueCounter);
+                                    // let option = {
+                                    //     cuisine: cuisineOption,
+                                    //     value: valueCounter
+                                    // };
+                                    cuisineArray.push(cuisineOption);
+                                    console.log(`${cuisineOption} was pushed into the array, there are ${valueCounter} options.`);
+                                } else if (cuisineArray.includes(cuisineOption) == true) {
+                                        console.log(`The cuisine array already includes ${cuisineOption}.`)
+                                }
+                            }
+                        };
+
+                        cuisineArray.sort();
+
+                        console.log(`After checking, all the cuisine options are ${cuisineArray} and there are ${valueCounter} options.`)
                         res.render('pages/choice', {
                             copyrightYear: siteData.year,
                             diners: dinersInfo,
-                            allRestaurants: allRestaurants
+                            cuisineArray: cuisineArray,
+                            valueCounter: valueCounter
                         });
                     }
                 })
@@ -1143,17 +1171,26 @@ module.exports = {
                         if(error) {
                             return error;
                         } else {
-                            let sushi = 0;
-                            let pizza = 0;
-                            let salad = 0;
-                            let diner = 0;
-                            let burrito = 0;
-                            let thai = 0;
-                            let french = 0;
-                            let hotPot = 0;
-                            let burger = 0;
-                            let dessert = 0;
-                            let random = 0;
+                            // let sushi = 0;
+                            // let pizza = 0;
+                            // let salad = 0;
+                            // let diner = 0;
+                            // let burrito = 0;
+                            // let thai = 0;
+                            // let french = 0;
+                            // let hotPot = 0;
+                            // let burger = 0;
+                            // let dessert = 0;
+                            // let random = 0;
+
+                            //initialize a counter for each cuisine option
+                            // for (let i = 1; i <= 8; i++) {
+                            //     for (let j = 1; j <= 3; j++) {
+                            //         if (diner[i]choice[j] 
+                            //     }
+                            // }
+
+
                             
                             //Calculating first diner's choices
                             switch (choiceData.diner1choice1) {
